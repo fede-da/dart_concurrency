@@ -1,4 +1,4 @@
-import 'tools/file_tool.dart';
+import '../lib/tools/file_tool.dart';
 
 void main(List<String> arguments) {
   final ft = FileTool();
