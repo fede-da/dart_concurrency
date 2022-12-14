@@ -1,13 +1,15 @@
 import 'dart:async';
 
 class StringGenerator {
-  String str = 'Ciao, sono una stringa generata random!\n';
+  static const String str = "Hi! Has Rufy's crew found the One Piece? \n";
   final _controller = StreamController<String>();
 
   void startGenerate() {
-    Timer.periodic(Duration(seconds: 1), (t) {
+    print(
+        "I'm copying this sentence many times into the file, be patient:\n$str");
+    Timer.periodic(Duration(milliseconds: 1), (t) {
+      //puts data inside inside the stream (events)
       _controller.sink.add(str);
-      //print("string added to sink");
     });
   }
 
